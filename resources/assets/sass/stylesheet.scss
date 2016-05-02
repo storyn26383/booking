@@ -1,0 +1,40 @@
+@import "settings";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bower_components/font-awesome/scss/font-awesome";
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.alert > ul {
+    padding-left: 15px;
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+.legends {
+    .legend {
+        float: left;
+
+        + .legend {
+            margin-left: 20px;
+        }
+
+        span {
+            display: inline-block;
+            margin-right: 5px;
+            width: 30px;
+        }
+    }
+}
+
+.next-step {
+    float: right;
+}

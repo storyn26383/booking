@@ -1,0 +1,13 @@
+{
+  "name": "booking",
+  "version": "0.0.0",
+  "authors": [
+    "Sasaya <storyn26383@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "noty": "^2.3.8",
+    "animate.css": "^3.5.1"
+  }
+}
