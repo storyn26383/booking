@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+/bower_components
+/public/storage
+/database/database.sqlite
+Homestead.yaml
+Homestead.json
+.env
+Thumbs.db
+.DS_Store
+._*
+*.bak
