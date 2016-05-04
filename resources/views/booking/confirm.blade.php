@@ -19,6 +19,14 @@
                     </div>
                 </div>
 
+                <div class="panel panel-warning">
+                    <div class="panel-heading">付款注意事項</div>
+
+                    <div class="panel-body">
+                        <p>本系統使用智付寶第三方支付金流平台的<strong class="text-danger">測試環境</strong>，所以您可以放心使用任何交易方式，並不會真的付款唷。</p>
+                    </div>
+                </div>
+
                 {!! csrf_field() !!}
                 <input type="hidden" name="date" value="{{ $date }}">
                 <input type="hidden" name="room" value="{{ $room->id }}">
