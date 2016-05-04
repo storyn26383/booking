@@ -21,6 +21,7 @@ class CreateBookingsTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('address');
+            $table->string('trade')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

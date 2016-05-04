@@ -6,6 +6,7 @@ use App\Room;
 use App\Booking;
 use Carbon\Carbon;
 use App\Http\Requests;
+use App\Payment\Pay2go;
 use Illuminate\Http\Request;
 use App\Http\Requests\Step2Request;
 use App\Http\Requests\Step3Request;
@@ -84,12 +85,16 @@ class BookingController extends Controller
         $room = Room::findOrFail($request->room);
         $date = $request->date;
 
-        $booking = $room->bookings()->where('date', $date)->count();
-
-        if ($booking > 0) {
+        if ($room->bookings()->where('date', $date)->count() > 0) {
             return view('booking.failure');
         }
 
-        $room->booking($request->all());
+        $booking = $room->booking($request->all());
+
+        $pay2go = new Pay2go($booking);
+
+        return view('booking.pay', [
+            'attributes' => $pay2go->pay(),
+        ]);
     }
 }

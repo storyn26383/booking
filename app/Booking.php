@@ -12,10 +12,20 @@ class Booking extends Model
     const LOCKED = 1;
     const RESERVED = 2;
 
-    protected $fillable = ['date', 'status', 'email', 'name', 'phone', 'address'];
+    protected $fillable = ['date', 'status', 'email', 'name', 'phone', 'address', 'trade'];
 
     protected $casts = [
         'status' => 'integer',
         'room_id' => 'integer',
     ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
+
+    public function logs()
+    {
+        return $this->hasMany(Log::class);
+    }
 }

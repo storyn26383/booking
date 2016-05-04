@@ -22,7 +22,7 @@ class Room extends Model
 
     public function booking($data)
     {
-        $this->bookings()->create([
+        return $this->bookings()->create([
             'date' => $data['date'],
             'status' => Booking::LOCKED,
             'email' => $data['email'],

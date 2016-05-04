@@ -17,7 +17,10 @@ Route::get('booking/room', 'BookingController@step2');
 Route::get('booking/data', 'BookingController@step3');
 Route::post('booking/confirm', 'BookingController@confirm');
 Route::post('booking', 'BookingController@booking');
-Route::post('pay', 'PayController@pay');
+
+Route::post('payment/{booking}', 'PaymentController@callback');
+Route::post('payment/{booking}/customer', 'PaymentController@customer');
+Route::post('payment/{booking}/notify', 'PaymentController@notify');
 
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
