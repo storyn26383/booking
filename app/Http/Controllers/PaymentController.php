@@ -31,6 +31,17 @@ class PaymentController extends Controller
         return view('payment.wait');
     }
 
+    public function notify(Request $request, $hash)
+    {
+        $booking = $this->getBooking($hash);
+
+        $pay2go = new Pay2go($booking);
+
+        $pay2go->notify($request);
+
+        return view('payment.success');
+    }
+
     protected function getBooking($hash)
     {
         return Booking::where('status', Booking::LOCKED)
