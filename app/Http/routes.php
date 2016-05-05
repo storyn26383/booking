@@ -22,6 +22,8 @@ Route::post('payment/{booking}', 'PaymentController@callback');
 Route::post('payment/{booking}/customer', 'PaymentController@customer');
 Route::post('payment/{booking}/notify', 'PaymentController@notify');
 
+Route::get('search', 'SearchController@showSearchForm');
+
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');

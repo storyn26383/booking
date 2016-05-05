@@ -31,6 +31,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/booking') }}">我要訂房</a></li>
+                    <li><a href="{{ url('/search') }}">查詢訂房紀錄</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
