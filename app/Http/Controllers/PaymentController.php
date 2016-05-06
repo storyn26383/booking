@@ -44,7 +44,6 @@ class PaymentController extends Controller
 
     protected function getBooking($hash)
     {
-        return Booking::where('status', Booking::LOCKED)
-                      ->findOrFail(head(app('hashids')->decode($hash)));
+        return Booking::findOrFail(head(app('hashids')->decode($hash)));
     }
 }
